@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+div {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+li {
+  list-style: none;
+  cursor: pointer;
+}
+
+body a {
+  text-decoration: none;
+}
+
+/* Section header*/
+
+.header {
+  main-picture.jpg
+}
