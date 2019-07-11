@@ -24,7 +24,7 @@ body a {
 
 .header {
   background-color: white;
-  height: 600px;
+  height: 700px;
   width: 100%;
 z-index: 3;
 }
@@ -108,7 +108,7 @@ li.information div {
 }
 
 .main-photo {
-  margin-top: 73px;
+  margin-top: 120px;
 }
 
 #my-photo {
@@ -124,8 +124,57 @@ li.information div {
 
 section.portfolio {
   background-color: #e2e8eccf;
-  height: 500px;
+  height: 900px;
   width: 100%;
+}
+
+.portfolio>div {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.title-button {
+  font-size: 30px;
+  text-align: center;
+  color: #2b2a2aeb;
+  height: 50px;
+  padding: 20px 10px 10px;
+  font-weight: initial;
+  font-family: initial;
+  word-spacing: 10px;
+  letter-spacing: 3px;
+}
+
+.tablink {
+  background-color: #d4dbe0cf;
+  color: white;
+  float: left;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+  height: 50px;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 50px;
+  text-align: center;
+}
+
+#about-me {
+  background-color: red;
+}
+#my-projects {
+  background-color: green;
 }
 
 .title {
@@ -147,8 +196,8 @@ section.portfolio ul {
 }
 
 section.portfolio li {
-  width: 25%;
-  height:300px;
+  width: 80%;
+  height:600px;
   background-color: #ffffffe8;
   margin: auto;
   background-size: cover;
@@ -194,6 +243,7 @@ section.portfolio li {
   background-color: #da336c;
   color: #2b2a2a;
 }
+
 
 /* FOOTER*/
 
@@ -258,7 +308,3 @@ article.contact {
   z-index: 3;
 }
 
-.accompanying-text {
-  color: #737373;
-  font-size: 19px;
-}

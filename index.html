@@ -22,42 +22,70 @@
           <div>
             <h1>HI, I'M KHRYSTYNA LIDAK</h1>
             <h2>I am Web Deweloper</h2>
+            <p>Programming is what intrests me now.<br>The timespent on programming is not wasted for me.</p>
           </div>
         </li>
         <li class="main-photo">
           <img id='my-photo'>
         </li>
       </ul>
-
     </article>
   </section>
+
   <section class="portfolio">
-    <h2 class="title"> My projects</h2>
-    <ul>
-      <li class="first-example portfolio-example">
-        <a href="///Users/tina/Documents/GitHub/Autotune/index.html"></a>
-        <div class="first-example-hover">
-          <button>SEE MORE</button>
-        </div>
-      </li>
-      <li class="second-example portfolio-example">
-        <a href="///Users/tina/Documents/GitHub/Kitchen_style/index.html"></a>
-        <div class="first-example-hover">
-          <button>SEE MORE</button>
-        </div>
-      </li>
-      <li class="third-example portfolio-example">
-        <a href="#"></a>
-        <div class="first-example-hover">
-          <button>SEE MORE</button>
-        </div>
-      </li>
-    </ul>
+    <div><button class="tablink" onclick="openOption('about-me',this, 'red')" id="defaultOpen"><h2 class="title-button"> About me</h2></button>
+    <button class="tablink" onclick="openOption('my-projects',this, 'green')"><h2 class="title-button"> My projects</h2></button></div>
+
+    <article id="about-me" class="tabcontent">
+      <ul>
+        <li>
+          <p>I started my programming path with learning in Lviv IT School. During few months I have implemented several simple web pages that were mostly HTML/CSS job with simple JS code. Now my goal is to work on real projects with highly skilled engineers.
+          I like working in team and have good communication skills. My hobbies are traveling and dancing.</p>
+        </li>
+        <li>
+          <h3>Experience</h3>
+          <p>
+            Company: Kyivstar;
+            Period: September 2010 – August 2014 Responsibilities: customer service, sails management;<br>
+            Company: Argos;
+            Period: March 2010 – August 2010; Responsibilities: active sails;
+          </p>
+        </li>
+        <li>
+          <h3>Certificates</h3>
+          <p>
+            'Web UI' course at Lviv Code School (LITS); June 2018.
+          </p>
+        </li>
+        <li>
+          <h3>Education</h3>
+        </li>
+      </ul>
+    </article>
+    <article id="my-projects" class="tabcontent">
+      <ul>
+        <li class="first-example portfolio-example">
+          <a href="///Users/tina/Documents/GitHub/Autotune/index.html"></a>
+          <div class="first-example-hover">
+            <button>SEE MORE</button>
+          </div>
+        </li>
+        <li class="second-example portfolio-example">
+          <a href="///Users/tina/Documents/GitHub/Kitchen_style/index.html"></a>
+          <div class="first-example-hover">
+            <button>SEE MORE</button>
+          </div>
+        </li>
+        <li class="third-example portfolio-example">
+          <a href="#"></a>
+          <div class="first-example-hover">
+            <button>SEE MORE</button>
+          </div>
+        </li>
+      </ul>
+    </article>
   </section>
-  
-   <section class="education">
-     
-   </section>
+
   <footer>
     <h2 class="title contact-footer">Contact Me</h1>
     <header>
@@ -68,8 +96,7 @@
       <div class="vcard">
           <address class="footer-address">
             <a href="#">
-              <img class="location" src="./icons/location-pointer.svg" alt="Image of location">
-                My Location, Frisco, TX
+              <img class="location" src="./icons/location-pointer.svg" alt="Image of location">My Location, Frisco, TX
               </a>
           </address>
           <div class="phones">
@@ -79,8 +106,7 @@
           </div>
           <div class="email">
             <a href="mailto:hristinalidak@gmail.com" subject="From page portfolio">
-              <img class="location" src="./icons/new-message.svg">
-              <div class="accompanying-text">Click here to send me a message -</div> hristinalidak@gmail.com
+              <img class="location" src="./icons/new-message.svg">hristinalidak@gmail.com
             </a>
           </div>
         </div>
@@ -88,5 +114,22 @@
      </header>
 
   </footer>
+
+  <script>
+    function openOption(optionName, elmnt, color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backroundColor = "";
+      }
+      document.getElementById(optionName).style.display = "block";
+      elmnt.style.backroundColor = color;
+      }
+      document.getElementById("defaultOpen").click();
+  </script>
 </body>
 </html>
