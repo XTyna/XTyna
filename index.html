@@ -33,10 +33,13 @@
   </section>
 
   <section class="portfolio">
-    <div><button class="tablink" onclick="openOption('about-me',this, 'red')" id="defaultOpen"><h2 class="title-button"> About me</h2></button>
-    <button class="tablink" onclick="openOption('my-projects',this, 'green')"><h2 class="title-button"> My projects</h2></button></div>
 
-    <article id="about-me" class="tabcontent">
+    <div class="tab">
+      <button class="tablink active" onclick="openOption(event, 'about-me')" id="defaultOpen"><h2 class="title-button"> About me</h2>
+      </button>
+    <button class="tablinks" onclick="openOption(event, 'my-projects')"><h2 class="title-button"> My projects</h2></button></div>
+
+    <article id="about-me" class="tabcontent active">
       <ul>
         <li>
           <p>I started my programming path with learning in Lviv IT School. During few months I have implemented several simple web pages that were mostly HTML/CSS job with simple JS code. Now my goal is to work on real projects with highly skilled engineers.
@@ -116,20 +119,44 @@
   </footer>
 
   <script>
-    function openOption(optionName, elmnt, color) {
+
+
+
+
+
+
+
+
+
+/*      document.querySelectorAll('button.tablink').forEach(function(optionName, ln){
+        optionName.onclick = function(){
+          document.querySelector('.active').classList.remove('active');
+          optionName.classList.add('active');
+          document.querySelector('article.active').classList.remove('active');
+          document.querySelectorAll('section div')[ln].classList.add('active');
+
+        }
+      })
+
+
+
+
+
+
+/*    function openOption(evt, optionName) {
       var i, tabcontent, tablinks;
       tabcontent = document.getElementsByClassName("tabcontent");
       for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
       }
-      tablinks = document.getElementsByClassName("tablink");
+      tablinks = document.getElementsByClassName("tablinks");
       for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].style.backroundColor = "";
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
       }
       document.getElementById(optionName).style.display = "block";
-      elmnt.style.backroundColor = color;
+      evt.currentTarget.className += " active";
       }
-      document.getElementById("defaultOpen").click();
+      */
   </script>
 </body>
 </html>

@@ -128,12 +128,14 @@ section.portfolio {
   width: 100%;
 }
 
-.portfolio>div {
+div.tab {
   width: 100%;
-  height: 50px;
+  height: 80px;
   display: flex;
   justify-content: center;
 }
+
+/*
 
 .title-button {
   font-size: 30px;
@@ -149,32 +151,42 @@ section.portfolio {
 
 .tablink {
   background-color: #d4dbe0cf;
-  color: white;
   float: left;
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
   font-size: 17px;
   width: 25%;
-  height: 50px;
 }
 
 .tablink:hover {
   background-color: #777;
 }
 
+.tab button.active {
+  background-color: #ccc;
+}
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+.tab button:hover {
+  background-color: #ddd;
+  }
+
 .tabcontent {
   color: white;
   display: none;
-  padding: 50px;
+  padding: 6px 12px;
   text-align: center;
 }
 
-#about-me {
-  background-color: red;
+/*#about-me {
+  background-color: #e6e6e6;
 }
 #my-projects {
-  background-color: green;
+  background-color: #e6e6e6;
 }
 
 .title {
@@ -243,7 +255,7 @@ section.portfolio li {
   background-color: #da336c;
   color: #2b2a2a;
 }
-
+*/
 
 /* FOOTER*/
 
