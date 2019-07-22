@@ -122,98 +122,72 @@ li.information div {
 
 /* SECTION PORTFOLIO*/
 
-section.portfolio {
+section.portf-information {
   background-color: #e2e8eccf;
   height: 900px;
   width: 100%;
 }
 
-div.tab {
-  width: 100%;
-  height: 80px;
-  display: flex;
-  justify-content: center;
-}
-
-/*
-
-.title-button {
-  font-size: 30px;
-  text-align: center;
-  color: #2b2a2aeb;
-  height: 50px;
-  padding: 20px 10px 10px;
-  font-weight: initial;
-  font-family: initial;
-  word-spacing: 10px;
-  letter-spacing: 3px;
+.portf-information-wrapper {
+  padding: 5% 10%;
+  height: 810px;
 }
 
 .tablink {
-  background-color: #d4dbe0cf;
+  background-color: #dde9f1;
+  color: #585858;
   float: left;
+  border: none;
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
-  font-size: 17px;
-  width: 25%;
-}
-
-.tablink:hover {
-  background-color: #777;
-}
-
-.tab button.active {
-  background-color: #ccc;
-}
-
-.tab button:hover {
-  background-color: #ddd;
-}
-
-.tab button:hover {
-  background-color: #ddd;
-  }
-
-.tabcontent {
-  color: white;
-  display: none;
-  padding: 6px 12px;
-  text-align: center;
-}
-
-/*#about-me {
-  background-color: #e6e6e6;
-}
-#my-projects {
-  background-color: #e6e6e6;
-}
-
-.title {
   font-size: 30px;
-  text-align: center;
-  color: #2b2a2aeb;
-  height: 90px;
-  padding: 20px 10px 10px;
+  width: 50%;
+  height: 100px;
   font-weight: initial;
   font-family: initial;
   word-spacing: 10px;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
+  transition: .8s;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
-section.portfolio ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.tablink:hover {
+  background-color: #c1d3de;
+  color: slategray;
 }
 
-section.portfolio li {
-  width: 80%;
-  height:600px;
-  background-color: #ffffffe8;
-  margin: auto;
-  background-size: cover;
+.tabcontent {
+  color: #484747;
+  display: none;
+  padding: 100px 50px 10px 50px;
+  text-align: center;
+  height: 650px;
   transition-timing-function: ease-in-out;
+}
+
+#about-me, 
+#portfolio {
+  background-color:#c7ddec;
+}
+
+.tabcontent>div {
+  padding-top: 50px;
+  width: 100%;
+}
+
+.portfolio-example-wrapper {
+  width: 100%;
+  display: flex;
+  height: 560px;
+  justify-content: space-around;
+}
+
+li.portfolio-example {
+  width: 30%;
+  height: 220px;
+  background-size: cover;
+
 }
 
 .first-example {
@@ -224,10 +198,25 @@ section.portfolio li {
   background-image: url("../icons/second-example.png");
 }
 
+.third-example {
+  background-color: white;
+}
+
 .first-example-hover {
   display: none;
   margin: 0 auto;
   text-align: center;
+  background-color: white;
+}
+
+.portfolio-example:hover .first-example-hover {
+  display: block;
+  background-color: white;
+  height: 220px;
+  box-shadow:0 3px 20px 0 rgba(31, 33, 43, 0.37);
+  z-index: 3;
+  background-image: none;
+  transition: 1s;
 }
 
 .first-example-hover button {
@@ -238,24 +227,13 @@ section.portfolio li {
   cursor: pointer;
   transition: .8s;
   margin-top: 124px;
-}
-
-.portfolio-example:hover {
-  box-shadow:0 3px 20px 0 rgba(31, 33, 43, 0.37);
-  background-color: white;
-  z-index: 3;
-  background-image: none;
-}
-
-.portfolio-example:hover .first-example-hover {
-  display: block;
+  transition-delay: .4s;
 }
 
 .first-example-hover button:hover {
   background-color: #da336c;
-  color: #2b2a2a;
+  color: white;
 }
-*/
 
 /* FOOTER*/
 
@@ -269,6 +247,18 @@ footer {
 footer header {
   display: flex;
   justify-content: space-evenly;
+}
+
+.title {
+  font-size: 30px;
+  text-align: center;
+  color: #2b2a2aeb;
+  height: 90px;
+  padding: 20px 10px 10px;
+  font-weight: initial;
+  font-family: initial;
+  word-spacing: 10px;
+  letter-spacing: 3px;
 }
 
 .contact-footer {
@@ -299,7 +289,7 @@ article.contact {
   width: 50%;
 }
 
-.location {
+img.location {
   width: 16px;
   height: 16px;
   padding-right: 15px;
@@ -320,3 +310,12 @@ article.contact {
   z-index: 3;
 }
 
+.wright-some-letter {
+  display: none;
+  text-align: center;
+  transition: .8s;
+}
+
+.email:hover .wright-some-letter {
+  display: flex;
+}

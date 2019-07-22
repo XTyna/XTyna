@@ -32,61 +32,61 @@
     </article>
   </section>
 
-  <section class="portfolio">
+  <section class="portf-information">
+    <div class="portf-information-wrapper">
+      <button class="tablink" onclick="openInfo('about-me', this, '#c7ddec')" id="defaultOpen">About Me</button>
+      <button class="tablink" onclick="openInfo('portfolio', this, '#c7ddec')">Portfolio</button>
 
-    <div class="tab">
-      <button class="tablink active" onclick="openOption(event, 'about-me')" id="defaultOpen"><h2 class="title-button"> About me</h2>
-      </button>
-    <button class="tablinks" onclick="openOption(event, 'my-projects')"><h2 class="title-button"> My projects</h2></button></div>
 
-    <article id="about-me" class="tabcontent active">
-      <ul>
-        <li>
-          <p>I started my programming path with learning in Lviv IT School. During few months I have implemented several simple web pages that were mostly HTML/CSS job with simple JS code. Now my goal is to work on real projects with highly skilled engineers.
-          I like working in team and have good communication skills. My hobbies are traveling and dancing.</p>
-        </li>
-        <li>
-          <h3>Experience</h3>
-          <p>
-            Company: Kyivstar;
-            Period: September 2010 – August 2014 Responsibilities: customer service, sails management;<br>
-            Company: Argos;
-            Period: March 2010 – August 2010; Responsibilities: active sails;
-          </p>
-        </li>
-        <li>
-          <h3>Certificates</h3>
-          <p>
-            'Web UI' course at Lviv Code School (LITS); June 2018.
-          </p>
-        </li>
-        <li>
-          <h3>Education</h3>
-        </li>
-      </ul>
-    </article>
-    <article id="my-projects" class="tabcontent">
-      <ul>
-        <li class="first-example portfolio-example">
-          <a href="///Users/tina/Documents/GitHub/Autotune/index.html"></a>
-          <div class="first-example-hover">
-            <button>SEE MORE</button>
-          </div>
-        </li>
-        <li class="second-example portfolio-example">
-          <a href="///Users/tina/Documents/GitHub/Kitchen_style/index.html"></a>
-          <div class="first-example-hover">
-            <button>SEE MORE</button>
-          </div>
-        </li>
-        <li class="third-example portfolio-example">
-          <a href="#"></a>
-          <div class="first-example-hover">
-            <button>SEE MORE</button>
-          </div>
-        </li>
-      </ul>
-    </article>
+      <article id="about-me" class="tabcontent">
+        <div>
+        <p>
+          I started my programming path with learning in Lviv IT School. During few months I have implemented several simple web pages that were mostly HTML/CSS job with simple JS code. Now my goal is to work on real projects with highly skilled engineers.
+            I like working in team and have good communication skills. My hobbies are traveling and dancing.
+        </p>
+        <h3>Experience</h3>
+        <p>
+          Company: Kyivstar;
+          Period: September 2010 – August 2014 Responsibilities: customer service, sails management;<br>
+          Company: Argos;
+          Period: March 2010 – August 2010; Responsibilities: active sails;
+        </p>
+        <h3>Certificates</h3>
+        <p>
+          'Web UI' course at Lviv Code School (LITS); June 2018.
+        </p>
+        <h3>Education</h3>
+        </div>
+      </article>
+
+      <article id="portfolio" class="tabcontent">
+        <div>
+          <ul class="portfolio-example-wrapper">
+          <li class="first-example portfolio-example">
+            <a href="///Users/tina/Documents/GitHub/Autotune/index.html"></a>
+            <div class="first-example-hover">
+              <button>SEE MORE</button>
+            </div>
+          </li>
+          <li class="second-example portfolio-example">
+            <a href="///Users/tina/Documents/GitHub/Kitchen_style/index.html"></a>
+            <div class="first-example-hover">
+              <button>SEE MORE</button>
+            </div>
+          </li>
+          <li class="third-example portfolio-example">
+            <a href="#"></a>
+            <div class="first-example-hover">
+              <button>SEE MORE</button>
+            </div>
+          </li>
+        </ul>
+
+        </div>
+      </article>
+
+  </div>
+
   </section>
 
   <footer>
@@ -109,7 +109,8 @@
           </div>
           <div class="email">
             <a href="mailto:hristinalidak@gmail.com" subject="From page portfolio">
-              <img class="location" src="./icons/new-message.svg">hristinalidak@gmail.com
+              <img class="location" src="./icons/new-message.svg">hristinalidak@gmail.com 
+              <div class="wright-some-letter">Write me letter</div>
             </a>
           </div>
         </div>
@@ -120,43 +121,24 @@
 
   <script>
 
+function openInfo(optionName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(optionName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
 
 
-
-
-
-
-
-
-/*      document.querySelectorAll('button.tablink').forEach(function(optionName, ln){
-        optionName.onclick = function(){
-          document.querySelector('.active').classList.remove('active');
-          optionName.classList.add('active');
-          document.querySelector('article.active').classList.remove('active');
-          document.querySelectorAll('section div')[ln].classList.add('active');
-
-        }
-      })
-
-
-
-
-
-
-/*    function openOption(evt, optionName) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-      tablinks = document.getElementsByClassName("tablinks");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-      }
-      document.getElementById(optionName).style.display = "block";
-      evt.currentTarget.className += " active";
-      }
-      */
   </script>
 </body>
 </html>
