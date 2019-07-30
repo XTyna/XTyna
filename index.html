@@ -8,21 +8,20 @@
 <body>
   <section class="header">
     <article class="manu">
-      <h2>Developer</h2>
+      <h2>Khrystyna Lidak</h2>
       <ul>
         <li><a href="#">HOME</a></li>
-        <li><a href="#">ABOUT ME</a></li>
-        <li><a href="#">PORTFOLIO</a></li>
-        <li><a href="#">CONTACTS</a></li>
+        <li><a href="#defaultOpen">ABOUT ME</a></li>
+        <li><a href="#portfolio-btn" onclick="openPortfolio()">PORTFOLIO</a></li>
+        <li><a href="#contact-me">CONTACTS</a></li>
       </ul>
     </article>
     <article class="about-me">
       <ul>
         <li class="information">
           <div>
-            <h1>HI, I'M KHRYSTYNA LIDAK</h1>
+            <h1>HI, I'M KHRYSTYNA</h1>
             <h2>I am Web Deweloper</h2>
-            <p>Programming is what intrests me now.<br>The timespent on programming is not wasted for me.</p>
           </div>
         </li>
         <li class="main-photo">
@@ -34,28 +33,30 @@
 
   <section class="portf-information">
     <div class="portf-information-wrapper">
-      <button class="tablink" onclick="openInfo('about-me', this, '#c7ddec')" id="defaultOpen">About Me</button>
-      <button class="tablink" onclick="openInfo('portfolio', this, '#c7ddec')">Portfolio</button>
+      <button class="tablink" onclick="openInfo('about-me', this)" id="defaultOpen" style="background-color: #c7ddec">About Me</button>
+      <button class="tablink" id="portfolio-btn" onclick="openInfo('portfolio', this)">Portfolio</button>
 
 
-      <article id="about-me" class="tabcontent">
+      <article id="about-me" class="tabcontent" style="display: block">
         <div>
-        <p>
-          I started my programming path with learning in Lviv IT School. During few months I have implemented several simple web pages that were mostly HTML/CSS job with simple JS code. Now my goal is to work on real projects with highly skilled engineers.
-            I like working in team and have good communication skills. My hobbies are traveling and dancing.
-        </p>
-        <h3>Experience</h3>
-        <p>
-          Company: Kyivstar;
-          Period: September 2010 – August 2014 Responsibilities: customer service, sails management;<br>
-          Company: Argos;
-          Period: March 2010 – August 2010; Responsibilities: active sails;
-        </p>
-        <h3>Certificates</h3>
-        <p>
-          'Web UI' course at Lviv Code School (LITS); June 2018.
-        </p>
-        <h3>Education</h3>
+          <p>
+            Programming is what intrests me now.<br>The timespent on programming is not wasted for me.</p>
+          <p>
+            I started my programming path with learning in Lviv IT School. During few months I have implemented several simple web pages that were mostly HTML/CSS job with simple JS code. Now my goal is to work on real projects with highly skilled engineers.
+              I like working in team and have good communication skills. My hobbies are traveling and dancing.
+          </p>
+          <h3>Experience</h3>
+          <p>
+            Company: Kyivstar;
+            Period: September 2010 – August 2014 Responsibilities: customer service, sails management;<br>
+            Company: Argos;
+            Period: March 2010 – August 2010; Responsibilities: active sails;
+          </p>
+          <h3>Certificates</h3>
+          <p>
+            'Web UI' course at Lviv Code School (LITS); June 2018.
+          </p>
+          <h3>Education</h3>
         </div>
       </article>
 
@@ -90,7 +91,7 @@
   </section>
 
   <footer>
-    <h2 class="title contact-footer">Contact Me</h1>
+    <h2 class="title contact-footer" id="contact-me">Contact Me</h1>
     <header>
      <article class="contact">
       <div class="map">
@@ -109,8 +110,7 @@
           </div>
           <div class="email">
             <a href="mailto:hristinalidak@gmail.com" subject="From page portfolio">
-              <img class="location" src="./icons/new-message.svg">hristinalidak@gmail.com 
-              <div class="wright-some-letter">Write me letter</div>
+              <img class="location" src="./icons/new-message.svg">hristinalidak@gmail.com
             </a>
           </div>
         </div>
@@ -121,7 +121,8 @@
 
   <script>
 
-function openInfo(optionName,elmnt,color) {
+function openInfo(optionName,elmnt) {
+  var color = '#c7ddec'
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
@@ -135,8 +136,11 @@ function openInfo(optionName,elmnt,color) {
   elmnt.style.backgroundColor = color;
 
 }
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+
+function portfolioOpenLink() {
+  document.getElementById("#portfolio-btn").click();
+}
+
 
 
   </script>

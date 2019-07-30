@@ -148,7 +148,7 @@ section.portf-information {
   font-family: initial;
   word-spacing: 10px;
   letter-spacing: 2px;
-  transition: .8s;
+  transition: .5s;
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
@@ -163,12 +163,14 @@ section.portf-information {
   padding: 100px 50px 10px 50px;
   text-align: center;
   height: 650px;
-  transition-timing-function: ease-in-out;
+  transition: .5s;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
 #about-me, 
 #portfolio {
   background-color:#c7ddec;
+  transition: .5s;
 }
 
 .tabcontent>div {
@@ -254,7 +256,7 @@ footer header {
   text-align: center;
   color: #2b2a2aeb;
   height: 90px;
-  padding: 20px 10px 10px;
+  padding: 20px 0px 0px;
   font-weight: initial;
   font-family: initial;
   word-spacing: 10px;
@@ -316,6 +318,6 @@ img.location {
   transition: .8s;
 }
 
-.email:hover .wright-some-letter {
+.email a:hover .wright-some-letter {
   display: flex;
 }
