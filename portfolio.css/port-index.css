@@ -124,13 +124,12 @@ li.information div {
 
 section.portf-information {
   background-color: #e2e8eccf;
-  height: 900px;
+  height: 700px;
   width: 100%;
 }
 
 .portf-information-wrapper {
   padding: 5% 10%;
-  height: 810px;
 }
 
 .tablink {
@@ -148,12 +147,13 @@ section.portf-information {
   font-family: initial;
   word-spacing: 10px;
   letter-spacing: 2px;
-  transition: .5s;
-  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+  transition: .6s;
+  transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+
 }
 
 .tablink:hover {
-  background-color: #c1d3de;
+  background-color: #cedee8;
   color: slategray;
 }
 
@@ -162,9 +162,13 @@ section.portf-information {
   display: none;
   padding: 100px 50px 10px 50px;
   text-align: center;
-  height: 650px;
-  transition: .5s;
+  transition: .6s;
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+div.about-me-wrapp {
+  text-align: justify;
+  padding: 10px 30px;
 }
 
 #about-me, 
@@ -173,15 +177,23 @@ section.portf-information {
   transition: .5s;
 }
 
+.about-me-wrapp p {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0 65px 0 40px;
+  line-height: 2.2;
+}
+
 .tabcontent>div {
   padding-top: 50px;
   width: 100%;
+  height: 400px;
 }
 
 .portfolio-example-wrapper {
   width: 100%;
   display: flex;
-  height: 560px;
+  height: 500px;
   justify-content: space-around;
 }
 
