@@ -16,29 +16,23 @@
       </ul>
   </section>
   <section id= "about-me" class="under-headder">
-      <ul>
-        <li class="information">
-          <div>
-            <h1>HI, I'M KHRYSTYNA</h1>
-            <h2>I am Web Developer</h2>
-          </div>
-          <div class="about-me-wrapp">
-            <p>
-              Programming is what intrests me now.<br>The time spent on programming is not wasted for me.<br>
-              I started my programming path with learning in Lviv IT School. It was a group for those who alredy had basic programming knowledge.I was the only one in the group who had no programming knowledge. During few months I had implemented several simple web pages that were mostly HTML/CSS job with simple JS code. At the end of my studies i was honored for studying the material.<br> Now my goal is to work on real projects with highly skilled engineers. I like working in team and have good communication skills.<br> My hobbies are traveling and dancing.
-            </p>
-          </div>
-        </li>
-        <li class="main-photo">
-          <img id='my-photo'>
-        </li>
-      </ul>
+    <article class="information">
+      <h1>HI, I'M KHRYSTYNA</h1>
+      <h2>I am Web Developer</h2>
+      <p>
+        Programming is what intrests me now.<br>The time spent on programming is not wasted for me.<br>
+        I started my programming path with learning in Lviv IT School. It was a group for those who alredy had basic programming knowledge.I was the only one in the group who had no programming knowledge. During few months I had implemented several simple web pages that were mostly HTML/CSS job with simple JS code. At the end of my studies i was honored for studying the material.<br> Now my goal is to work on real projects with highly skilled engineers. I like working in team and have good communication skills.<br> My hobbies are traveling and dancing.
+      </p>
+    </article>
+    <article class="main-photo">
+      <img id='my-photo'>
+    </article>
   </section>
 
   <section class="portf-information">
     <div class="portf-information-wrapper">
-      <h2 id="portfolio" class="tablink">Portfolio</h2>
-      <article id="portfolio" class="tabcontent">
+      <h2 id="portfolio" class="project">Portfolio</h2>
+      <article id="portfolio" class="projectcontent">
         <div>
           <ul class="portfolio-example-wrapper">
             <li class="first-example portfolio-example">
@@ -82,13 +76,10 @@
     <h2 class="title contact-footer" id="contact-me">Contact Me</h1>
     <header>
       <article class="contact">
-        <div class="map">
-          <img src="./icons/frisco_tx.gif" alt="Frisco direction">
-        </div>
         <div class="vcard">
           <address class="footer-address">
             <a href="#">
-              <img class="location" src="./icons/location-pointer.svg" alt="Image of location">My Location, Frisco, TX
+              <img class="location" src="./icons/location-pointer.svg" alt="Image of location">My Location: Frisco, TX
             </a>
           </address>
             <div class="phones">
@@ -102,6 +93,9 @@
               </a>
             </div>
         </div>
+        <div id="map">
+          
+        </div>
       </article>
     </header>
 
@@ -109,4 +103,17 @@
 
 
 </body>
+<script type="text/javascript">
+  let map;
+  function initMap() {
+map = new google.maps.Map(document.grtElementById("map"),
+{
+  center: {lat: 33.132349,lng: -96.772726}, zoom: 8
+});
+}
+
+</script>
+
+
+
 </html>

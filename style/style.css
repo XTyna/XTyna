@@ -90,45 +90,50 @@ body a {
 /* SECTION- under-headder */
 
 section.under-headder {
-padding-top: 70px;
+padding: 70px;
+
 }
 
-.under-headder ul {
-  display: flex;
-  padding: 30px;
+article.information {
+  float: left;
+  width: 60%;
+  margin-top: 10%;
+  margin-bottom: 5%;
 }
 
-.under-headder li {
-  width: 50%;
-  padding: 50px;
+article.main-photo {
+  float: right;
+  width: 40%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
-
-li.information div {
+article.information h1,
+article.information h2 {
   font-family: fantasy;
   text-shadow: 1px -2px 7px rgb(77, 126, 193);
   font-size: x-large;
   color: #707070;
 }
 
-.about-me-wrapp p {
+article.information p {
   font-size: 17px;
-
+  font-family: fantasy;
+  color: #707070;
+  text-shadow: 1px -2px 7px rgb(77, 126, 193);
 }
 
-.main-photo {
-  margin-top: -20px;
-}
 
 #my-photo {
   background-image: url('../icons/logo.png');
   background-size: cover;
   width: 380px;
-  height: 450px;
+  height: 485px;
   border: 10px #e1dacb solid;
   border-radius: 5px;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  background-color: #e7edf1;
 }
 
 /* SECTION PORTFOLIO*/
@@ -137,13 +142,14 @@ section.portf-information {
   background-color: #e2e8eccf;
   height: 850px;
   width: 100%;
+  clear: both;
 }
 
 .portf-information-wrapper {
-  padding: 5% 7%;
+  padding: 5% 5%;
 }
 
-.tablink {
+.project {
   background-color: #dde9f1;
   color: #585858;
   border: none;
@@ -162,7 +168,7 @@ section.portf-information {
 }
 
 
-.tabcontent {
+.projectcontent {
   background-color: #dde9f1;
   color: #484747;
   display: block;
@@ -172,7 +178,7 @@ section.portf-information {
   padding: 0 20px;
 }
 
-.tabcontent>div {
+.projectcontent>div {
   padding-top: 40px;
   width: 100%;
   height: 575px;
@@ -194,6 +200,8 @@ section.portf-information {
   background-repeat: no-repeat;
   background-position: center;
   min-width: 295px;
+  min-height: 200px;
+  margin: 15px;
 }
 
 .portfolio-example> div {
@@ -271,12 +279,12 @@ li.portfolio-example:hover > div {
   position: absolute;
   right: 0;
   left: 0;
-
 }
 
 #example-btn:hover {
   background-color: #da336c;
   color: white;
+  transition: color .8s
 }
 
 /* FOOTER*/
@@ -290,14 +298,14 @@ footer {
 
 footer header {
   display: flex;
-  justify-content: space;
+  justify-content: center;
 }
 
 .title {
   font-size: 30px;
   text-align: center;
   color: #2b2a2aeb;
-  height: 90px;
+  height: 80px;
   padding: 20px 0px 0px;
   font-weight: initial;
   font-family: initial;
@@ -317,6 +325,11 @@ article.contact {
   border-radius: 5px;
   position: relative;
   display: flex;
+}
+
+#map{
+  width: 50%;
+  height:300px;
 }
 
 .map {
@@ -364,4 +377,134 @@ img.location {
   display: flex;
 }
 
+@media screen and (max-width: 700px) {
+  #my-photo {
+    width: 244px;
+    height: 320px;
+  }
+  .header-manu ul {
+    display: none;
+  }
+  .header-manu>h2,
+  .header-manu>h1 {
+    width: 100%;
+  }
+  article.information {
+    float: left;
+    width: 90%;
+  }
+  section.under-headder {
+    padding: 70px;
+    flex-direction: column-reverse;
+    display: flex;
+  }
+  .portf-information-wrapper {
+    padding: 0;
+  }
+  .project{
+    height: 20px;
+  }
+  section.portf-information {
+  height: 1365px;
+  }
+  .projectcontent>div {
+    width: 100%;
+    height: 1270px;
+  }
+  article.contact {
+    width: 90%;
+  }
+  .vcard {
+    position: absolute;
+    left: 19%;
+    width: 100%;
+}
+@media screen and (max-width: 800px) {
+
+  .portf-information-wrapper {
+    padding: 0;
+  }
+  section.portf-information {
+    height: 900px;
+  }
+  .projectcontent>div {
+    height: 800px;
+  }
+  article.contact {
+    width: 91%;
+  }
+  #my-photo {
+    margin: 10px;
+  }
+}
+
 @media screen and (max-width: 992px) {
+  section.portf-information {
+    height: 1000px;
+  }
+  .portf-information-wrapper {
+    padding: 5% 5%;
+  }
+  .under-headder ul {
+    flex-direction: column-reverse;
+    width: 90%;
+  }
+  .under-headder li {
+    width: 100%;
+  }
+  .projectlink {
+    height: 20px;
+  }
+  #my-photo {
+    float: right;
+    width: 85%;
+    height: 300px;
+  }
+  li.information {
+  margin-top: -140px;
+  }
+  .projectcontent>div {
+    height: 800px
+  }
+  article.contact {
+    width: 80%
+  }
+
+}
+
+@media screen and (max-width: 1130px) {
+
+  section.portf-information {
+    height: 1000px;
+  }
+  .projectcontent>div  {
+    height: 770px;
+  }
+  .portfolio-example {
+    width: 45%;
+  }
+  article.contact {
+    width: 80%;
+  }
+  #my-photo {
+    width: 80%;
+    height: 410px;
+}
+@media screen and (max-width: 1400px) {
+  .portfolio-example {
+    width: 30%;
+  }
+  .projectcontent>div {
+    height: 560px;
+  }
+
+  section.portf-information {
+    height: 810px;
+  }
+  section.under-headder {
+    padding: 70px 5%;
+  }
+    #my-photo {
+    width: 365px;
+    height: 430px;
+}
