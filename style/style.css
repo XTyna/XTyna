@@ -140,7 +140,6 @@ article.information p {
 
 section.portf-information {
   background-color: #e2e8eccf;
-  height: 850px;
   width: 100%;
   clear: both;
 }
@@ -181,13 +180,13 @@ section.portf-information {
 .projectcontent>div {
   padding-top: 40px;
   width: 100%;
-  height: 575px;
+/*  height: 575px;*/
 }
 
 .portfolio-example-wrapper {
   width: 100%;
   display: flex;
-  height: 500px;
+/*  height: 500px;*/
   justify-content: space-around;
   flex-wrap: wrap;
 }
@@ -330,19 +329,13 @@ article.contact {
 #map{
   width: 50%;
   height:300px;
-}
-
-.map {
-  width: 45%;
-  right: 50%;
-  top: 12%;
-  position: absolute;
+  margin: 15px;
 }
 
 .vcard {
   position: absolute;
   top: 30%;
-  left: 50%;
+  left: 60%;
   width: 40%;
 }
 
@@ -377,134 +370,45 @@ img.location {
   display: flex;
 }
 
-@media screen and (max-width: 700px) {
-  #my-photo {
-    width: 244px;
-    height: 320px;
+@media only screen and (max-width: 600px) { 
+  .header-manu{
+    display: inline-block;
   }
   .header-manu ul {
     display: none;
-  }
-  .header-manu>h2,
-  .header-manu>h1 {
-    width: 100%;
-  }
-  article.information {
-    float: left;
-    width: 90%;
-  }
-  section.under-headder {
-    padding: 70px;
-    flex-direction: column-reverse;
-    display: flex;
-  }
-  .portf-information-wrapper {
-    padding: 0;
-  }
-  .project{
-    height: 20px;
-  }
-  section.portf-information {
-  height: 1365px;
-  }
-  .projectcontent>div {
-    width: 100%;
-    height: 1270px;
-  }
-  article.contact {
-    width: 90%;
-  }
-  .vcard {
-    position: absolute;
-    left: 19%;
-    width: 100%;
-}
-@media screen and (max-width: 800px) {
-
-  .portf-information-wrapper {
-    padding: 0;
-  }
-  section.portf-information {
-    height: 900px;
-  }
-  .projectcontent>div {
-    height: 800px;
-  }
-  article.contact {
-    width: 91%;
-  }
-  #my-photo {
-    margin: 10px;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  section.portf-information {
-    height: 1000px;
-  }
-  .portf-information-wrapper {
-    padding: 5% 5%;
-  }
-  .under-headder ul {
-    flex-direction: column-reverse;
-    width: 90%;
-  }
-  .under-headder li {
-    width: 100%;
-  }
-  .projectlink {
-    height: 20px;
-  }
-  #my-photo {
+    flex-flow: column;
     float: right;
-    width: 85%;
-    height: 300px;
   }
-  li.information {
-  margin-top: -140px;
-  }
-  .projectcontent>div {
-    height: 800px
-  }
-  article.contact {
-    width: 80%
+  .header-manu li {
+    color: gray;
+    padding: 10px 20px;
+    width: 125px;
+    height: 25px;
+    background-color: #c0d1e9;
+    border-color: #cad7ec;
+    border-style: solid;
+    border-width: thin;
+}
   }
 
 }
 
-@media screen and (max-width: 1130px) {
-
-  section.portf-information {
-    height: 1000px;
-  }
-  .projectcontent>div  {
-    height: 770px;
-  }
-  .portfolio-example {
-    width: 45%;
-  }
-  article.contact {
-    width: 80%;
-  }
-  #my-photo {
-    width: 80%;
-    height: 410px;
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .example {background: green;}
 }
-@media screen and (max-width: 1400px) {
-  .portfolio-example {
-    width: 30%;
-  }
-  .projectcontent>div {
-    height: 560px;
-  }
 
-  section.portf-information {
-    height: 810px;
-  }
-  section.under-headder {
-    padding: 70px 5%;
-  }
-    #my-photo {
-    width: 365px;
-    height: 430px;
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .example {background: blue;}
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .example {background: orange;}
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
 }
