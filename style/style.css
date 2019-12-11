@@ -230,9 +230,13 @@ section.portf-information {
 }
 
 .fourth-example {
-  background-color: #efef97;
+  background-image: url("../icons/fourth-example.png");
+  background-color: white;
 }
 
+.five-example {
+  background-color: #efef97;
+}
 .fourth-example h2 {
   position: relative;
   top: 85px;
