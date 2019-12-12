@@ -7,8 +7,8 @@ html,
 body,
 div {
   font-size: 16px;
-  font-family: sans-serif;
-}
+  font-family: initial;
+} 
 
 
 li {
@@ -45,9 +45,9 @@ body a {
   padding-left: 20px;
   font-family: cursive;
   word-spacing: 10px;
-  font-size: 25px;
   line-height: 74px;
   z-index: 4;
+  font-size: x-large;
 }
 
 #linked:hover {
@@ -246,15 +246,8 @@ section.portf-information {
 }
 
 .five-example {
-  background-color: #efef97;
-}
-.fourth-example h2 {
-  position: relative;
-  top: 85px;
-  color: #484747fc;
-  text-shadow: 0 0 2px rgb(179, 174, 174);
-  font-family: initial;
-  letter-spacing: 4px;
+background-image: url("../icons/icon-vue-js.png");
+background-color: white;
 }
 
 li.portfolio-example:hover {
@@ -293,6 +286,7 @@ li.portfolio-example:hover > div {
   position: absolute;
   right: 0;
   left: 0;
+  transition: .6s;
 }
 
 #example-btn:hover {
