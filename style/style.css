@@ -413,6 +413,21 @@ section.under-headder {
     height: 300px;
   }
 }
+
+
+@media only screen and (min-width: 600px) {
+  article.contact {
+    width: 85%;
+  }
+  #map {
+    width: 40%;
+  }
+  .vcard {
+    left: 45%;
+    width: 60%;
+  }
+}
+
 @media only screen and (max-width: 650px) {
   .header-manu{
     display: inline-block;
@@ -427,27 +442,12 @@ section.under-headder {
   }
 }
 
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  article.contact {
-    width: 85%;
-  }
-  #map {
-    width: 40%;
-  }
-  .vcard {
-    left: 45%;
-    width: 60%;
-  }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  .example {background: blue;}
+  .example {
+    background: blue;
+  }
 } 
 
-/* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .example {
     background: orange;
@@ -456,10 +456,8 @@ section.under-headder {
   article.information {
     width: 55%;
     padding-right: 5%;
-} 
+  } 
 }
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 
 }

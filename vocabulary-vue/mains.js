@@ -12,7 +12,7 @@
               <div class="addNewWord" >
                 <input type="text" placeholder="English word" name="fname" v-model="eng" /><br>
                 <input type="text" placeholder="Ukrainen word" name="" v-model="ukr" />
-                <div style="color: red" v-if="ukr = !(/[а-яієїґ\']+/ig )">Please use ukrainian letters</div>
+                <div style="color: blue" v-if="ukr.match(/[а-яієїґ\']+/g )">Please use ukrainian letters</div>
                 <input id="addBut" v-on:click="addWord()"
                                    type="button" 
                                    value="Add Word"
@@ -24,6 +24,7 @@
                       <tr>
                           <th>English Word</th>
                           <th>Translate</th>
+                          <th></th>
                       </tr>
                       <tr v-for="word in words">
                         <p v-if="!words.length">There are no words yet.</p>
