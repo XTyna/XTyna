@@ -192,13 +192,11 @@ section.portf-information {
 .projectcontent>div {
   padding-top: 40px;
   width: 100%;
-/*  height: 575px;*/
 }
 
 .portfolio-example-wrapper {
   width: 100%;
   display: flex;
-/*  height: 500px;*/
   justify-content: space-around;
   flex-wrap: wrap;
 }
@@ -400,6 +398,7 @@ img.location {
   }
   article.main-photo {
     width: 100%;
+    padding-left: 0;
   }
 section.under-headder {
     display: flex;
@@ -464,6 +463,7 @@ section.under-headder {
     width: 55%;
     padding-right: 5%;
 } 
+}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
