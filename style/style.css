@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0;
 }
+body {
+  overflow-x: hidden;
+}
 
 html,
 body,
@@ -90,9 +93,11 @@ body a {
 /* SECTION- under-headder */
 
 section.under-headder {
-  padding: 10%;
+  padding: 25% 10% 10%;
   min-height: 400px;
   margin: 0 auto;
+  display: flex;
+  flex-wrap: unset;
 }
 
 article.information {
@@ -299,14 +304,13 @@ li.portfolio-example:hover > div {
 
 footer {
   background-color: #2b2a2a;
-  height: 530px;
   width: 100%;
   background-size: cover;
 }
 
 footer header {
-  display: flex;
-  justify-content: center;
+/*  display: flex;
+  justify-content: center;*/
 }
 
 .title {
@@ -327,11 +331,11 @@ footer header {
 
 article.contact {
   width: 60%;
-  height: 350px;
+  height: auto;
   background-color: #ffffffe8;
   color: #cac5c5;
   border-radius: 5px;
-  position: relative;
+  flex-wrap: wrap;
   display: flex;
 }
 
@@ -342,10 +346,8 @@ article.contact {
 }
 
 .vcard {
-  position: absolute;
-  top: 30%;
-  left: 60%;
-  width: 40%;
+  width: 50%;
+  margin: 15px;
 }
 
 img.location {
@@ -379,6 +381,8 @@ img.location {
   display: flex;
 }
 
+
+
 @media only screen and (max-width: 600px) { 
   .header-manu li {
     color: gray;
@@ -400,16 +404,16 @@ section.under-headder {
     flex-flow: column-reverse;
   }
   article.contact {
-    width: 85%;
-    padding: 5%;
+    width: 90%;
+    margin: 0 auto;
+
   }
   .vcard {
-    position: absolute;
-    top: 20%;
-    left: 50%;
+    width: 90%;
+    height: 300%;
   }
   #map {
-    width: 40%;
+    width: 90%;
     height: 300px;
   }
 }
@@ -418,14 +422,18 @@ section.under-headder {
 @media only screen and (min-width: 600px) {
   article.contact {
     width: 85%;
+    height: 650px;
   }
-  #map {
-    width: 40%;
-  }
-  .vcard {
-    left: 45%;
-    width: 60%;
-  }
+    .vcard{
+      width: 100%;
+
+    }
+    #map {
+      width: 100%;
+    }
+    article.information {
+      width: auto;
+    }
 }
 
 @media only screen and (max-width: 650px) {
@@ -438,7 +446,18 @@ section.under-headder {
   .header-manu ul {
     display: none;
     flex-flow: column;
-    float: right;
+    float: center;
+
+  }
+    #map {
+    width: 100%;
+  }
+  .vcard {
+    width: 100%;
+  }
+    footer {
+    width: 100%;
+    height: 670px;
   }
 }
 
@@ -446,6 +465,10 @@ section.under-headder {
   .example {
     background: blue;
   }
+    article.information {
+    width: auto;
+    padding: 5%;
+  } 
 } 
 
 @media only screen and (min-width: 992px) {
@@ -454,7 +477,7 @@ section.under-headder {
   }
 
   article.information {
-    width: 55%;
+    width: 50%;
     padding-right: 5%;
   } 
 }
