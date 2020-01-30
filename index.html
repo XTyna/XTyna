@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style/style.css" type="text/css" />
     <script type="text/javascript" src="../../Super.js"></script>
@@ -106,8 +106,10 @@
                     <div id="map">
                     </div>
                 </article>
+
             </header>
     </footer>
+    <button onclick="topFunction()" id="toTop" title="Go to top">^</button>
 </body>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
 </script>
@@ -119,6 +121,25 @@ function initMap() {
         center: { lat: 33.132349, lng: -96.772726 },
         zoom: 9
     });
+}
+</script>
+<script>
+
+var mybutton = document.getElementById("toTop");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }
 </script>
 

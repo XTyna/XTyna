@@ -96,7 +96,7 @@ section.under-headder {
   padding: 25% 10% 10%;
   min-height: 400px;
   margin: 0 auto;
-  display: flex;
+  display: inline-flex;
   flex-wrap: unset;
 }
 
@@ -216,6 +216,11 @@ section.portf-information {
   min-width: 295px;
   min-height: 200px;
   margin: 15px;
+  transition: all .2s ease-in-out;
+}
+
+.portfolio-example:hover{
+  transform: scale(1.1); 
 }
 
 .portfolio-example> div {
@@ -306,11 +311,12 @@ footer {
   background-color: #2b2a2a;
   width: 100%;
   background-size: cover;
+  padding-bottom: 10px;
+  height: auto;
 }
 
 footer header {
-/*  display: flex;
-  justify-content: center;*/
+margin-bottom: 25px;
 }
 
 .title {
@@ -331,12 +337,14 @@ footer header {
 
 article.contact {
   width: 60%;
-  height: auto;
+  height: fit-content;
   background-color: #ffffffe8;
   color: #cac5c5;
   border-radius: 5px;
   flex-wrap: wrap;
   display: flex;
+  margin: 0 auto;
+  padding: 5%;
 }
 
 #map{
@@ -348,6 +356,7 @@ article.contact {
 .vcard {
   width: 50%;
   margin: 15px;
+  text-align: center;
 }
 
 img.location {
@@ -381,7 +390,31 @@ img.location {
   display: flex;
 }
 
+#toTop {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #545353e0;
+  text-align: center;
+  padding: 5px;
+  position: fixed;
+  bottom: 35px;
+  right: 30px;
+  cursor: pointer;
+  border-style: none;
+  color: #fff;
+  font-family: verdana;
+  font-size: 20px;
+  outline: none;
+  z-index: 20;
+  transition: .6s;
+  display: none;
+}
 
+#toTop:hover {
+background-color: #a71043d1;
+
+}
 
 @media only screen and (max-width: 600px) { 
   .header-manu li {
@@ -422,7 +455,6 @@ section.under-headder {
 @media only screen and (min-width: 600px) {
   article.contact {
     width: 85%;
-    height: 650px;
   }
     .vcard{
       width: 100%;
