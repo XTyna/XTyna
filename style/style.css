@@ -107,6 +107,14 @@ article.information {
   padding: 10% 5% 5% 0;
 }
 
+a.contact {
+  color: #385e85;
+}
+
+a.contact:hover {
+  color: #295b91;
+}
+
 article.main-photo {
   float: right;
   width: 35%;
@@ -216,11 +224,11 @@ section.portf-information {
   min-width: 295px;
   min-height: 200px;
   margin: 15px;
-  transition: all .2s ease-in-out;
+  transition: all .6s ease-in-out;
 }
 
 .portfolio-example:hover{
-  transform: scale(1.1); 
+  transform: scale(1.05); 
 }
 
 .portfolio-example> div {
@@ -281,7 +289,7 @@ li.portfolio-example:hover > div {
 #example-btn {
   font-size: 20px;
   color: #5a5a5a;
-  border: 2px #da336c solid;
+  border: 2px #c8bd61 solid;
   padding: 12px 20px;
   cursor: pointer;
   transition-delay: .2s;
@@ -300,9 +308,8 @@ li.portfolio-example:hover > div {
 }
 
 #example-btn:hover {
-  background-color: #da336c;
-  color: white;
-  transition: color .8s
+  background-color: #e0cf3cba;
+  transition: color .6s
 }
 
 /* FOOTER*/
@@ -514,5 +521,7 @@ section.under-headder {
   } 
 }
 @media only screen and (min-width: 1200px) {
-
+.about-me, .portf-information {
+  min-height: 100vh;
+}
 }
