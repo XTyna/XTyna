@@ -55,7 +55,7 @@ body a {
 
 #linked:hover {
   z-index: 2;
-  color: #a71043;
+  color: #e8dd78;
   text-shadow: 0 0 2px rgb(138, 136, 136);
 }
 
@@ -86,7 +86,7 @@ body a {
 
 .header-manu a:hover {
   z-index: 1;
-  color: #a71043;
+  color: #e8dd78;
   text-shadow: 0 0 2px rgb(138, 136, 136);
 }
 
@@ -268,6 +268,11 @@ background-image: url("../icons/icon-vue-js.png");
 background-color: white;
 }
 
+.six-example {
+background-image: url("../icons/task-traker.png");
+background-color: white;
+}
+
 li.portfolio-example:hover {
   background-color: white;
   box-shadow:0 3px 20px 0 rgba(31, 33, 43, 0.37);
@@ -304,7 +309,7 @@ li.portfolio-example:hover > div {
   position: absolute;
   right: 0;
   left: 0;
-  transition: .6s;
+  transition: .7s;
 }
 
 #example-btn:hover {
@@ -497,6 +502,7 @@ section.under-headder {
     footer {
     width: 100%;
     height: 670px;
+    min-height: 100vh;
   }
 }
 
