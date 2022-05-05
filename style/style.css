@@ -112,7 +112,7 @@ a.contact {
 }
 
 a.contact:hover {
-  color: #295b91;
+  color: #5184b8f7;
 }
 
 article.main-photo {
@@ -199,7 +199,7 @@ section.portf-information {
   text-align: center;
   transition: .6s;
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
-  padding: 0 20px;
+  padding: 20px;
 }
 
 .projectcontent>div {
